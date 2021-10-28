@@ -4,6 +4,15 @@ project("SnakeSDL")
 
 add_executable("${PROJECT_NAME}" "main.cpp")
 
+add_subdirectory(external/SDL)
+
+target_include_directories("${PROJECT_NAME}" PUBLIC external/SDL/include)
+
+target_link_directories("${PROJECT_NAME}" PRIVATE external/SDL)
+
+target_link_libraries("${PROJECT_NAME}" SDL2)
+
+
 #When you clone the project, it is not automatically going to grab the submodules.
 #You can write this git command to do this:
 #	git submodule update --init --recursive
