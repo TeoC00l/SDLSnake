@@ -1,14 +1,19 @@
+//@Author: Teodor Tysklind // Teodor.Tysklind@FutureGames.nu
+
 #define SDL_MAIN_HANDLED
 #include <SDL.h>
 #include <stdio.h>
+#include "map.h"
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 600;
+const int SCREEN_HEIGHT = 600;
 
 
 int main(int argc, char* args[])
 {
+	Map map;
+
 	SDL_Window* window = NULL;
 
 	SDL_Surface* screenSurface = NULL;
@@ -48,6 +53,8 @@ int main(int argc, char* args[])
             SDL_Delay( 2000 );
         }    
     }
+
+
 
 	//Destroy window
     SDL_DestroyWindow( window );
