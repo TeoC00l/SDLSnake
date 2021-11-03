@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION "3.21.3")
 
 project("SnakeSDL")
 
-add_executable("${PROJECT_NAME}" "main.cpp" "map.cpp")
+add_executable("${PROJECT_NAME}" "main.cpp" "map.cpp" "window.cpp")
 
 add_subdirectory(external/SDL)
 
